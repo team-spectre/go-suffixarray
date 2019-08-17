@@ -1,0 +1,4 @@
+github.com/team-spectre/go-bigarray v1.0.0 h1:0XhUg6UMZlPvKOFKPKarKrRgMdDTJtXnL9r39nBzan4=
+github.com/team-spectre/go-bigarray v1.0.0/go.mod h1:aCSing51rcSdMLOW0dWUK3ug961rwxiRvg6itVBWWug=
+github.com/team-spectre/go-bigbitvector v1.0.0 h1:EkeUZAOMA//b0t0Rn2LbeOy3NNSmwmNtg/ziEfTVl1I=
+github.com/team-spectre/go-bigbitvector v1.0.0/go.mod h1:J9ztMfi7v4ISNX8w8L+tY2ToiGfhVyx4VgqzrvmeXLc=

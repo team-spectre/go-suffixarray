@@ -1,0 +1,40 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/team-spectre/go-suffixarray
+gazelle(name = "gazelle")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "buckets.go",
+        "debug.go",
+        "doc.go",
+        "lcparray.go",
+        "options.go",
+        "sais.go",
+        "search.go",
+        "suffixarray.go",
+        "text.go",
+        "typemap.go",
+        "util.go",
+    ],
+    importpath = "github.com/team-spectre/go-suffixarray",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_team_spectre_go_bigarray//:go_default_library",
+        "@com_github_team_spectre_go_bigbitvector//:go_default_library",
+    ],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = [
+        "lcparray_test.go",
+        "sais_test.go",
+        "search_test.go",
+        "shared_test.go",
+    ],
+    embed = [":go_default_library"],
+    deps = ["@com_github_team_spectre_go_bigarray//:go_default_library"],
+)
